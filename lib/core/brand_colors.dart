@@ -17,5 +17,7 @@ class BrandColors {
   static Color get text => Color.fromRGBO(43, 43, 43, 1);
 
   static Color get subTextDark => Color.fromRGBO(112, 123, 129, 1);
+
+  static Color get TextLight => Color.fromRGBO(255, 255, 255, 1);
   
 }
