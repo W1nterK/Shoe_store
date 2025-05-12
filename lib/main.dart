@@ -11,7 +11,7 @@ void main() async {
   runApp(
     EasyLocalization(
       supportedLocales: [Locale('en'), Locale('ru',)],
-      path: 'lib/assets/localization/', // <-- change the path of the translation files 
+      path: 'assets/localization', // <-- change the path of the translation files 
       fallbackLocale: Locale('en'),
       child: App()
     )
@@ -25,7 +25,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final RouterConfigGO _router = new RouterConfigGO();
-    return MaterialApp.router(
+    return MaterialApp.router( 
        localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,
       locale: context.locale,

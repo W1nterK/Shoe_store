@@ -4,9 +4,9 @@ import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:easy_localization/easy_localization.dart';
-import 'package:matule/core/brand_colors.dart';
-import 'package:matule/layers/presentation/shared/password_field.dart';
-import 'package:matule/layers/presentation/shared/email_field.dart';
+import 'package:matule/core/helpers/brand_colors.dart';
+import 'package:matule/layers/presentation/shared/ui/password_field.dart';
+import 'package:matule/layers/presentation/shared/ui/email_field.dart';
 
 class SigninScreen extends StatelessWidget {
   const SigninScreen({super.key});
@@ -106,7 +106,7 @@ class SigninScreen extends StatelessWidget {
             CupertinoButton(
               borderRadius: BorderRadius.circular(100),
               color: BrandColors.accent,
-              onPressed: () => context.push('/'),
+              onPressed: () => context.go('/home'),
               child: Text(
                 context.tr('sign_in'),
                 style: TextStyle(color: BrandColors.TextLight,),
