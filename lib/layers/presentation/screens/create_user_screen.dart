@@ -26,11 +26,11 @@ class _CreateUserState extends State<CreateUser> {
               children: [
                 Container(
                   decoration: BoxDecoration(
-                    color: Color.fromRGBO(245, 243, 243, 1),
+                    color: BrandColors.background,
                     borderRadius: BorderRadius.circular(100),
                   ),
                   child: IconButton(
-                    onPressed: () => context.go('/'),
+                    onPressed: () => context.go('/signin'),
                     icon: Icon(CupertinoIcons.back),
                   ),
                 ),

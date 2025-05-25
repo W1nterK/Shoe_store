@@ -40,7 +40,6 @@ class _CheckBoxState extends State<CheckBox> {
             ),
           ),
         ),
-        
       ],
     );
   }

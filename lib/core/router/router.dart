@@ -1,52 +1,72 @@
-import  'package:matule/layers/presentation/screens/create_user_screen.dart';
-import  'package:matule/layers/presentation/screens/forgot_password_srceen.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
+import 'package:matule/layers/presentation/screens/build_screen.dart';
+import 'package:matule/layers/presentation/screens/create_user_screen.dart';
+import 'package:matule/layers/presentation/screens/favorite_screen.dart';
+import 'package:matule/layers/presentation/screens/forgot_password_srceen.dart';
 import 'package:matule/layers/presentation/screens/home_screen.dart';
-import  'package:matule/layers/presentation/screens/signin_screen.dart';
+import 'package:matule/layers/presentation/screens/notifications_screen.dart';
+import 'package:matule/layers/presentation/screens/outdoor_screen.dart';
+import 'package:matule/layers/presentation/screens/signin_screen.dart';
 import 'package:go_router/go_router.dart';
+import 'package:matule/layers/presentation/shared/ui/drawer_menu.dart';
 
 class RouterConfigGO {
   final GoRouter router = GoRouter(
-    initialLocation: '/',
+    initialLocation: '/signin',
     routes: [
-      StatefulShellRoute.indexedStack(
-       builder: (context, state, navigationShell) => SigninScreen(navigationShell: navigationShell,),
-       branches: [
-         StatefulShellBranch(
-           routes: [
-             GoRoute(path: '/', builder: (context, state) => HomeScreen()),
-           ],
-         ),
-         StatefulShellBranch(
-           routes: [
-             GoRoute(path: '/settings', builder: (context, state) => SecondScreen()),
-           ],
-         ),
-         StatefulShellBranch(
-           routes: [
-             GoRoute(path: '/profile', builder: (context, state) => ProfileScreen()),
-           ],
-         ),
-       ],
-     ),
+      GoRoute(path: '/signin', builder: (context, state) => SigninScreen()),
       GoRoute(
-        path: '/',
-        builder: (context, state) => SigninScreen(),
-        routes: [
-          GoRoute(
-            path: '/pass',
-            builder: (context, state) => ForgotPasswordsrceen(),
-            routes: [],
-          ),
-          GoRoute(
-            path: '/create',
-            builder: (context, state) => CreateUser(),
+        path: '/pass',
+        builder: (context, state) => ForgotPasswordsrceen(),
+      ),
+      GoRoute(path: '/create', builder: (context, state) => CreateUser()),
+
+      StatefulShellRoute.indexedStack(
+        builder: (context, state, navigationShell) {
+          return ZoomDrawer(
+            controller: ZoomDrawerController(),
+            menuScreen: DrawerMenu(),
+            mainScreen: BuildScreen(navigationShell: navigationShell),
+            borderRadius: 24.0,
+            showShadow: false,
+            angle: -12.0,
+            slideWidth: MediaQuery.of(context).size.width * 0.65,
+          );
+        },
+        branches: [
+          StatefulShellBranch(
             routes: [
+              GoRoute(path: '/home', builder: (context, state) => HomeScreen()),
+              GoRoute(
+                path: '/outdoor',
+                builder: (context, state) => OutdoorScreen(),
+              ),
             ],
           ),
-          GoRoute(
-            path: '/home',
-            builder: (context, state) => HomeScreen(),
-            routes: [],
+          StatefulShellBranch(
+            routes: [
+              GoRoute(
+                path: '/favorite',
+                builder: (context, state) => FavoriteScreen(),
+              ),
+            ],
+          ),
+          StatefulShellBranch(
+            routes: [
+              GoRoute(
+                path: '/notifications',
+                builder: (context, state) => NotificationsScreen(),
+              ),
+            ],
+          ),
+          StatefulShellBranch(
+            routes: [
+              GoRoute(
+                path: '/profile',
+                builder: (context, state) => ForgotPasswordsrceen(),
+              ),
+            ],
           ),
         ],
       ),

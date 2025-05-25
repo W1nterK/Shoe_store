@@ -19,11 +19,11 @@ class ForgotPasswordsrceen extends StatelessWidget {
               children: [
                 Container(
                   decoration: BoxDecoration(
-                    color: Color.fromRGBO(245, 243, 243, 1),
+                    color: BrandColors.background,
                     borderRadius: BorderRadius.circular(100),
                   ),
                   child: IconButton(
-                    onPressed: () => context.go('/'),
+                    onPressed: () => context.go('/signin'),
                     icon: Icon(CupertinoIcons.back),
                   ),
                 ),
@@ -54,7 +54,7 @@ class ForgotPasswordsrceen extends StatelessWidget {
                 autofocus: true,
                 decoration: InputDecoration(
                   filled: true,
-                  fillColor: Colors.transparent,
+                  fillColor: BrandColors.background,
                   disabledBorder: InputBorder.none,
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(100),

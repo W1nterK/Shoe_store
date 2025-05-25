@@ -23,10 +23,10 @@ class SigninScreen extends StatelessWidget {
               children: [
                 Container(
                   decoration: BoxDecoration(
-                    color: Color.fromRGBO(245, 243, 243, 1),
+                    color: BrandColors.background,
                     borderRadius: BorderRadius.circular(100),
                   ),
-                  child: IconButton( //Кнопка смены языка
+                  child: IconButton(
                     onPressed: () {
                       if (context.locale.languageCode == 'en') {
                         context.setLocale(Locale('ru'));
@@ -48,13 +48,10 @@ class SigninScreen extends StatelessWidget {
             Text(
               context.tr('fill_your_details'),
               textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 18,
-                color: BrandColors.subTextDark,
-              ),
+              style: TextStyle(fontSize: 18, color: BrandColors.subTextDark),
             ),
             SizedBox(height: 60),
-            Text( // Текст над первым полем
+            Text(
               context.tr('email'),
               style: TextStyle(
                 fontWeight: FontWeight.w500,
@@ -64,16 +61,16 @@ class SigninScreen extends StatelessWidget {
               textAlign: TextAlign.left,
             ),
             SizedBox(height: 12.0),
-            Container( // Первое поле
+            Container(
               height: 48.0,
               decoration: BoxDecoration(
-                color: Color.fromRGBO(247, 247, 249, 1),
+                color: BrandColors.background,
                 borderRadius: BorderRadius.circular(14.0),
               ),
               child: EmailField(),
             ),
             SizedBox(height: 20),
-            Text( // Текст над вторым полем
+            Text(
               context.tr('password'),
               style: TextStyle(
                 fontWeight: FontWeight.w500,
@@ -83,7 +80,7 @@ class SigninScreen extends StatelessWidget {
               textAlign: TextAlign.left,
             ),
             SizedBox(height: 12.0),
-            Container( // Второе поле
+            Container(
               height: 48.0,
               decoration: BoxDecoration(
                 color: BrandColors.background,
@@ -95,10 +92,7 @@ class SigninScreen extends StatelessWidget {
               onTap: () => context.go('/pass'),
               child: Text(
                 context.tr('forgot_password'),
-                style: TextStyle(
-                  fontSize: 15,
-                  color: BrandColors.subTextDark,
-                ),
+                style: TextStyle(fontSize: 15, color: BrandColors.subTextDark),
                 textAlign: TextAlign.right,
               ),
             ),
@@ -109,7 +103,7 @@ class SigninScreen extends StatelessWidget {
               onPressed: () => context.go('/home'),
               child: Text(
                 context.tr('sign_in'),
-                style: TextStyle(color: BrandColors.TextLight,),
+                style: TextStyle(color: BrandColors.TextLight),
               ),
             ),
 
@@ -122,14 +116,15 @@ class SigninScreen extends StatelessWidget {
                     children: [
                       Text(
                         context.tr('new_user'),
-                        style: TextStyle(
-                          color: BrandColors.text,
-                        ),
+                        style: TextStyle(color: BrandColors.text),
                       ),
                       SizedBox(width: 10),
                       GestureDetector(
                         onTap: () => context.push('/create'),
-                        child: Text(context.tr('create_account'),style: TextStyle(color: BrandColors.subTextDark),),
+                        child: Text(
+                          context.tr('create_account'),
+                          style: TextStyle(color: BrandColors.subTextDark),
+                        ),
                       ),
                     ],
                   ),

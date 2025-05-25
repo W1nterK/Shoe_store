@@ -7,14 +7,15 @@ import 'package:google_fonts/google_fonts.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
-  
+
   runApp(
     EasyLocalization(
-      supportedLocales: [Locale('en'), Locale('ru',)],
-      path: 'assets/localization', // <-- change the path of the translation files 
+      supportedLocales: [Locale('en'), Locale('ru')],
+      path:
+          'assets/localization', // <-- change the path of the translation files
       fallbackLocale: Locale('en'),
-      child: App()
-    )
+      child: App(),
+    ),
   );
 }
 
@@ -25,15 +26,17 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final RouterConfigGO _router = new RouterConfigGO();
-    return MaterialApp.router( 
-       localizationsDelegates: context.localizationDelegates,
+    return MaterialApp.router(
+      localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,
       locale: context.locale,
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         textTheme: GoogleFonts.latoTextTheme(),
-        colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 255, 255, 255)),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color.fromARGB(255, 255, 255, 255),
+        ),
       ),
       routerConfig: _router.router,
     );

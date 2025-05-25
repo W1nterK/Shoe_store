@@ -25,8 +25,9 @@ class _PasswordFieldState extends State<PasswordField> {
         fillColor: Colors.transparent,
         disabledBorder: InputBorder.none,
         border: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(100),
-      borderSide: BorderSide.none,),
+          borderRadius: BorderRadius.circular(100),
+          borderSide: BorderSide.none,
+        ),
       ),
     );
   }
