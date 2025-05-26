@@ -7,6 +7,7 @@ import 'package:matule/layers/presentation/screens/forgot_password_srceen.dart';
 import 'package:matule/layers/presentation/screens/home_screen.dart';
 import 'package:matule/layers/presentation/screens/notifications_screen.dart';
 import 'package:matule/layers/presentation/screens/outdoor_screen.dart';
+import 'package:matule/layers/presentation/screens/search_screen.dart';
 import 'package:matule/layers/presentation/screens/signin_screen.dart';
 import 'package:go_router/go_router.dart';
 import 'package:matule/layers/presentation/shared/ui/drawer_menu.dart';
@@ -21,6 +22,7 @@ class RouterConfigGO {
         builder: (context, state) => ForgotPasswordsrceen(),
       ),
       GoRoute(path: '/create', builder: (context, state) => CreateUser()),
+      
 
       StatefulShellRoute.indexedStack(
         builder: (context, state, navigationShell) {
@@ -64,7 +66,15 @@ class RouterConfigGO {
             routes: [
               GoRoute(
                 path: '/profile',
-                builder: (context, state) => ForgotPasswordsrceen(),
+                builder: (context, state) => SearchScreen(),
+              ),
+            ],
+          ),
+          StatefulShellBranch(
+            routes: [
+              GoRoute(
+                path: '/search',
+                builder: (context, state) => SearchScreen(),
               ),
             ],
           ),

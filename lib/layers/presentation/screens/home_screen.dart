@@ -7,6 +7,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:matule/core/helpers/brand_colors.dart';
 import 'package:matule/layers/presentation/screens/outdoor_screen.dart';
 import 'package:matule/layers/presentation/screens/popular_screen.dart';
+import 'package:matule/layers/presentation/screens/search_screen.dart';
 import 'package:matule/layers/presentation/shared/ui/card_screen.dart';
 import 'package:matule/layers/presentation/shared/ui/home_button.dart';
 
@@ -71,25 +72,44 @@ class _HomeScreenState extends State<HomeScreen> {
                     color: BrandColors.block,
                     borderRadius: BorderRadius.circular(100),
                   ),
-                  child: TextField(
-                    controller: _searchController,
-                    decoration: InputDecoration(
-                      hintText: context.tr('looking_for_shoes'),
-                      prefixIcon: Icon(Icons.search),
-                      suffixIcon:
-                          _searchController.text.isEmpty
-                              ? null
-                              : IconButton(
-                                icon: Icon(Icons.close),
-                                onPressed: () {
-                                  _searchController.clear();
-                                  setState(() {});
-                                },
-                              ),
-                      border: InputBorder.none,
-                      contentPadding: EdgeInsets.symmetric(vertical: 8),
+                  child: GestureDetector(
+                    onTap:
+                        () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => SearchScreen(),
+                          ),
+                        ),
+                    child: Container(
+                      height: 50,
+                      width: 50,
+                      decoration: BoxDecoration(
+                        color: BrandColors.block,
+                        borderRadius: BorderRadius.circular(100),
+                      ),
+                      child: IgnorePointer(
+                        child: TextField(
+                          // controller: _searchController,
+                          decoration: InputDecoration(
+                            hintText: context.tr('looking_for_shoes'),
+                            prefixIcon: Icon(Icons.search),
+                            // suffixIcon:
+                            //     _searchController.text.isEmpty
+                            //         ? null
+                            //         : IconButton(
+                            //           icon: Icon(Icons.close),
+                            //           onPressed: () {
+                            //             _searchController.clear();
+                            //             setState(() {});
+                            //           },
+                            //         ),
+                            border: InputBorder.none,
+                            contentPadding: EdgeInsets.symmetric(vertical: 8),
+                          ),
+                          // onChanged: (value) => setState(() {}),
+                        ),
+                      ),
                     ),
-                    onChanged: (value) => setState(() {}),
                   ),
                 ),
               ),

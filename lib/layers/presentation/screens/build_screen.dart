@@ -26,6 +26,7 @@ class _BuildScreenState extends State<BuildScreen> {
     return ZoomDrawer(
       borderRadius: 24.0,
       showShadow: false,
+      menuBackgroundColor: BrandColors.accent,
       angle: -3.0,
       menuScreen: const DrawerMenu(),
       mainScreen: Scaffold(
@@ -39,7 +40,7 @@ class _BuildScreenState extends State<BuildScreen> {
               child: Container(
                 height: 102.0,
                 width: double.maxFinite,
-                color: BrandColors.background,
+                // color: BrandColors.background,
                 child: Stack(
                   children: [
                     Positioned(
