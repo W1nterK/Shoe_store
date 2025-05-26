@@ -34,7 +34,7 @@ class SigninScreen extends StatelessWidget {
                         context.setLocale(Locale('en'));
                       }
                     },
-                    icon: Icon(CupertinoIcons.globe),
+                    icon: Icon(Icons.g_translate),
                   ),
                 ),
               ],

@@ -57,5 +57,6 @@
     "name": "Your Name",
     "profile": "Profile",
     "last_name": "Last Name",
-    "save_now": "Save Now"
+    "save_now": "Save Now",
+    "language": "Language"
 }

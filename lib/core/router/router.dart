@@ -5,9 +5,11 @@ import 'package:matule/layers/presentation/screens/create_user_screen.dart';
 import 'package:matule/layers/presentation/screens/favorite_screen.dart';
 import 'package:matule/layers/presentation/screens/forgot_password_srceen.dart';
 import 'package:matule/layers/presentation/screens/home_screen.dart';
+import 'package:matule/layers/presentation/screens/language_screen.dart';
 import 'package:matule/layers/presentation/screens/notifications_screen.dart';
 import 'package:matule/layers/presentation/screens/outdoor_screen.dart';
 import 'package:matule/layers/presentation/screens/search_screen.dart';
+import 'package:matule/layers/presentation/screens/settings_screen.dart';
 import 'package:matule/layers/presentation/screens/signin_screen.dart';
 import 'package:go_router/go_router.dart';
 import 'package:matule/layers/presentation/shared/ui/drawer_menu.dart';
@@ -75,6 +77,22 @@ class RouterConfigGO {
               GoRoute(
                 path: '/search',
                 builder: (context, state) => SearchScreen(),
+              ),
+            ],
+          ),
+          StatefulShellBranch(
+            routes: [
+              GoRoute(
+                path: '/settings',
+                builder: (context, state) => SettingsScreen(),
+              ),
+            ],
+          ),
+           StatefulShellBranch(
+            routes: [
+              GoRoute(
+                path: '/language',
+                builder: (context, state) => LanguageScreen(),
               ),
             ],
           ),

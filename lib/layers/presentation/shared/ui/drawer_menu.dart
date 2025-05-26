@@ -180,7 +180,10 @@ class DrawerMenu extends StatelessWidget {
                   ),
                 ],
               ),
-              onPressed: () {},
+              onPressed: () {
+                ZoomDrawer.of(context)?.close();
+                context.go('/settings');
+              },
             ),
           ),
 
