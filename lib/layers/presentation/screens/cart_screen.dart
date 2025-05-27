@@ -1,24 +1,22 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:matule/core/helpers/brand_colors.dart';
 import 'package:matule/layers/presentation/screens/home_screen.dart';
-import 'package:matule/layers/presentation/shared/ui/card_screen.dart';
 
-class PopularScreen extends StatefulWidget {
-  const PopularScreen({super.key});
+class CartScreen extends StatefulWidget {
+  const CartScreen({super.key});
 
   @override
-  State<PopularScreen> createState() => _PopularScreenState();
+  State<CartScreen> createState() => _CartScreenState();
 }
 
-class _PopularScreenState extends State<PopularScreen> {
+class _CartScreenState extends State<CartScreen> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: BrandColors.background,
+      color: BrandColors.block,
       padding: EdgeInsets.symmetric(horizontal: 20, vertical: 40),
       child: Column(
         children: [
@@ -28,7 +26,7 @@ class _PopularScreenState extends State<PopularScreen> {
               Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(100),
-                  color: BrandColors.block,
+                  color: BrandColors.background,
                 ),
                 alignment: Alignment.center,
                 child: IconButton(
@@ -41,37 +39,36 @@ class _PopularScreenState extends State<PopularScreen> {
                 ),
               ),
               Text(
-                context.tr('popular_shoes'),
+                context.tr('orders'),
                 style: GoogleFonts.roboto(
                   fontSize: 20,
                   color: BrandColors.text,
                   fontWeight: FontWeight.w600,
                 ),
               ),
-              Container(
-                decoration: BoxDecoration(
-                  color: BrandColors.block,
-                  borderRadius: BorderRadius.circular(100),
-                ),
-                alignment: Alignment.center,
-                child: IconButton(
-                  onPressed: () {},
-                  icon: Icon(CupertinoIcons.heart, size: 20,),
-                ),
-              ),
+              SizedBox(width: 40),
             ],
           ),
-          SizedBox(height: 20),
-          Expanded(
-            child: GridView.count(
-              crossAxisCount: 2,
-              childAspectRatio: 0.9,
-              crossAxisSpacing: 10,
-              mainAxisSpacing: 10,
-              padding: EdgeInsets.all(6),
-              children: List.generate(16, (index) => CardScreen()),
-            ),
+          SizedBox(height: 15,),
+          Row(
+            children: [
+              Text('3 Товара'),
+            ],
           ),
+          SizedBox(height: 10,),
+          Stack(
+            children: [
+              Positioned(
+                left: 1,
+                top: 1,
+                child: 
+              Container(
+                height: 80,
+                width: 40,
+                color: BrandColors.accent,
+              ))
+            ],
+          )
         ],
       ),
     );

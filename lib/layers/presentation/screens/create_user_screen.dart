@@ -155,7 +155,7 @@ class _CreateUserState extends State<CreateUser> {
                       ),
                       SizedBox(width: 10),
                       GestureDetector(
-                        onTap: () => context.push('/'),
+                        onTap: () => context.push('/signin'),
                         child: Text(
                           context.tr('sign_in'),
                           style: TextStyle(color: BrandColors.subTextDark),

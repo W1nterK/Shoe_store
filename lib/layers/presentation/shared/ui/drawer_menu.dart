@@ -134,7 +134,7 @@ class DrawerMenu extends StatelessWidget {
               ),
               onPressed: () {
                 ZoomDrawer.of(context)?.close();
-                context.go('/favorite');
+                context.go('/cart');
               },
             ),
           ),
@@ -208,8 +208,8 @@ class DrawerMenu extends StatelessWidget {
                 ],
               ),
               onPressed: () {
-                Supabase.instance.client.auth.signOut();
-                context.go('/onboarding');
+                // Supabase.instance.client.auth.signOut();
+                context.go('/signin');
               },
             ),
           ),

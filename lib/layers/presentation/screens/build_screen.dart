@@ -38,7 +38,7 @@ class _BuildScreenState extends State<BuildScreen> {
               left: 0,
               right: 0,
               child: Container(
-                height: 102.0,
+                height: 110.0,
                 width: double.maxFinite,
                 // color: BrandColors.background,
                 child: Stack(
@@ -106,12 +106,14 @@ class _BuildScreenState extends State<BuildScreen> {
 
                       child: Center(
                         child: FloatingActionButton(
+                          backgroundColor: BrandColors.accent,
                           shape: RoundedRectangleBorder(
+                            
                             borderRadius: BorderRadius.circular(100.0),
                           ),
                           elevation: 12.0,
-                          child: const Icon(CupertinoIcons.bag, size: 24.0),
-                          onPressed: () {},
+                          child:  Icon(CupertinoIcons.bag, size: 22.0, color: BrandColors.block,),
+                          onPressed: () => _navigationOnIndex(4),
                         ),
                       ),
                     ),

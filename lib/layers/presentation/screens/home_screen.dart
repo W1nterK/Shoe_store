@@ -8,6 +8,7 @@ import 'package:matule/core/helpers/brand_colors.dart';
 import 'package:matule/layers/presentation/screens/outdoor_screen.dart';
 import 'package:matule/layers/presentation/screens/popular_screen.dart';
 import 'package:matule/layers/presentation/screens/search_screen.dart';
+import 'package:matule/layers/presentation/screens/settings_screen.dart';
 import 'package:matule/layers/presentation/shared/ui/card_screen.dart';
 import 'package:matule/layers/presentation/shared/ui/home_button.dart';
 
@@ -120,9 +121,13 @@ class _HomeScreenState extends State<HomeScreen> {
                   borderRadius: BorderRadius.circular(100),
                 ),
                 child: IconButton(
+                  onPressed: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => SettingsScreen()),
+                      ),
                   icon: Icon(Icons.settings),
                   color: BrandColors.block,
-                  onPressed: () {},
+                
                 ),
               ),
             ],

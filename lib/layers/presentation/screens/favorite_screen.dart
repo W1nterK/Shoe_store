@@ -39,15 +39,15 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
                           builder: (context) => HomeScreen(),
                         ),
                       ),
-                  icon: Icon(CupertinoIcons.back),
+                  icon: Icon(CupertinoIcons.back, size: 20,),
                 ),
               ),
               Text(
                 context.tr('favorite'),
                 style: GoogleFonts.roboto(
-                  fontSize: 25,
+                  fontSize: 20,
                   color: BrandColors.text,
-                  fontWeight: FontWeight.w700,
+                  fontWeight: FontWeight.w600,
                 ),
               ),
               Container(
@@ -58,7 +58,7 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
                 alignment: Alignment.center,
                 child: IconButton(
                   onPressed: () {},
-                  icon: Icon(CupertinoIcons.heart),
+                  icon: Icon(CupertinoIcons.heart, size: 20,),
                 ),
               ),
             ],
@@ -70,7 +70,7 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
               childAspectRatio: 0.9,
               crossAxisSpacing: 10,
               mainAxisSpacing: 10,
-              padding: EdgeInsets.all(8),
+              padding: EdgeInsets.all(6),
               children: List.generate(16, (index) => CardScreen()),
             ),
           ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
 import 'package:matule/layers/presentation/screens/build_screen.dart';
+import 'package:matule/layers/presentation/screens/cart_screen.dart';
 import 'package:matule/layers/presentation/screens/create_user_screen.dart';
 import 'package:matule/layers/presentation/screens/favorite_screen.dart';
 import 'package:matule/layers/presentation/screens/forgot_password_srceen.dart';
@@ -8,6 +9,7 @@ import 'package:matule/layers/presentation/screens/home_screen.dart';
 import 'package:matule/layers/presentation/screens/language_screen.dart';
 import 'package:matule/layers/presentation/screens/notifications_screen.dart';
 import 'package:matule/layers/presentation/screens/outdoor_screen.dart';
+import 'package:matule/layers/presentation/screens/profile_screen.dart';
 import 'package:matule/layers/presentation/screens/search_screen.dart';
 import 'package:matule/layers/presentation/screens/settings_screen.dart';
 import 'package:matule/layers/presentation/screens/signin_screen.dart';
@@ -68,7 +70,15 @@ class RouterConfigGO {
             routes: [
               GoRoute(
                 path: '/profile',
-                builder: (context, state) => SearchScreen(),
+                builder: (context, state) => ProfileScreen(),
+              ),
+            ],
+          ),
+                    StatefulShellBranch(
+            routes: [
+              GoRoute(
+                path: '/cart',
+                builder: (context, state) => CartScreen(),
               ),
             ],
           ),

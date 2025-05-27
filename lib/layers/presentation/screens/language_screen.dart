@@ -54,7 +54,11 @@ class _LanguageScreenState extends State<LanguageScreen> {
             child: Column(
               children: [
                 GestureDetector(
-                  onTap: () {},
+                 onTap: () { 
+                  
+                        context.setLocale(Locale('ru'));
+                    
+                         },
                   child: Container(
                     height: 60,
                     width: 400,
@@ -66,7 +70,7 @@ class _LanguageScreenState extends State<LanguageScreen> {
                     alignment: Alignment.centerLeft,
                     child: Row(
                       children: [
-                        Icon(Icons.vaccines),
+                        Icon(Icons.language),
                         SizedBox(width: 20),
                         Text(
                         'Русский',
@@ -80,9 +84,40 @@ class _LanguageScreenState extends State<LanguageScreen> {
                     ),
                   ),
                 ),
+                 SizedBox(height: 15),
+                GestureDetector(
+                  onTap: () { 
+                        context.setLocale(Locale('en')); },
+                  child: Container(
+                    height: 60,
+                    width: 400,
+                    padding: EdgeInsets.symmetric(horizontal: 24),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(50),
+                      color: BrandColors.block,
+                    ),
+                    alignment: Alignment.centerLeft,
+                    child: Row(
+                      children: [
+                        Icon(Icons.language),
+                        SizedBox(width: 20),
+                        Text(
+                        'English',
+                          style: GoogleFonts.roboto(
+                            fontSize: 15,
+                            color: BrandColors.text,
+                            // fontWeight: FontWeight.w700,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                
               ],
             ),
           ),
+          
         ],
       ),
     );
