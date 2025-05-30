@@ -5,10 +5,6 @@ import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:matule/core/helpers/brand_colors.dart';
-import 'package:matule/layers/presentation/screens/outdoor_screen.dart';
-import 'package:matule/layers/presentation/screens/popular_screen.dart';
-import 'package:matule/layers/presentation/screens/search_screen.dart';
-import 'package:matule/layers/presentation/screens/settings_screen.dart';
 import 'package:matule/layers/presentation/shared/ui/card_screen.dart';
 import 'package:matule/layers/presentation/shared/ui/home_button.dart';
 
@@ -37,9 +33,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   borderRadius: BorderRadius.circular(100),
                 ),
                 child: IconButton(
-                  onPressed: () {
-                    ZoomDrawer.of(context)?.toggle();
-                  },
+                  onPressed: () => ZoomDrawer.of(context)?.toggle(),
                   icon: Icon(Icons.menu),
                 ),
               ),
@@ -57,7 +51,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   borderRadius: BorderRadius.circular(100),
                 ),
                 child: IconButton(
-                  onPressed: () {},
+                  onPressed: () => context.go('/cart'),
                   icon: Icon(CupertinoIcons.bag),
                 ),
               ),
@@ -67,47 +61,21 @@ class _HomeScreenState extends State<HomeScreen> {
           Row(
             children: [
               Expanded(
-                child: Container(
-                  height: 40,
-                  decoration: BoxDecoration(
-                    color: BrandColors.block,
-                    borderRadius: BorderRadius.circular(100),
-                  ),
-                  child: GestureDetector(
-                    onTap:
-                        () => Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => SearchScreen(),
-                          ),
-                        ),
-                    child: Container(
-                      height: 50,
-                      width: 50,
-                      decoration: BoxDecoration(
-                        color: BrandColors.block,
-                        borderRadius: BorderRadius.circular(100),
-                      ),
-                      child: IgnorePointer(
-                        child: TextField(
-                          // controller: _searchController,
-                          decoration: InputDecoration(
-                            hintText: context.tr('looking_for_shoes'),
-                            prefixIcon: Icon(Icons.search),
-                            // suffixIcon:
-                            //     _searchController.text.isEmpty
-                            //         ? null
-                            //         : IconButton(
-                            //           icon: Icon(Icons.close),
-                            //           onPressed: () {
-                            //             _searchController.clear();
-                            //             setState(() {});
-                            //           },
-                            //         ),
-                            border: InputBorder.none,
-                            contentPadding: EdgeInsets.symmetric(vertical: 8),
-                          ),
-                          // onChanged: (value) => setState(() {}),
+                child: GestureDetector(
+                  onTap: () => context.go('/search'),
+                  child: Container(
+                    height: 40,
+                    decoration: BoxDecoration(
+                      color: BrandColors.block,
+                      borderRadius: BorderRadius.circular(100),
+                    ),
+                    child: IgnorePointer(
+                      child: TextField(
+                        decoration: InputDecoration(
+                          hintText: context.tr('looking_for_shoes'),
+                          prefixIcon: Icon(Icons.search),
+                          border: InputBorder.none,
+                          contentPadding: EdgeInsets.symmetric(vertical: 8),
                         ),
                       ),
                     ),
@@ -121,13 +89,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   borderRadius: BorderRadius.circular(100),
                 ),
                 child: IconButton(
-                  onPressed: () => Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => SettingsScreen()),
-                      ),
+                  onPressed: () => context.go('/settings'),
                   icon: Icon(Icons.settings),
                   color: BrandColors.block,
-                
                 ),
               ),
             ],
@@ -169,7 +133,6 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                 ),
-
                 Container(
                   width: 150,
                   margin: EdgeInsets.only(right: 12),
@@ -180,13 +143,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   alignment: Alignment.center,
                   child: GestureDetector(
-                    onTap:
-                        () => Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => OutdoorScreen(),
-                          ),
-                        ),
+                    onTap: () => context.go('/outdoor'),
                     child: Text(
                       'Outdoor',
                       style: GoogleFonts.roboto(
@@ -197,7 +154,6 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                 ),
-
                 Container(
                   width: 150,
                   padding: EdgeInsets.symmetric(horizontal: 24),
@@ -231,11 +187,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
               GestureDetector(
-                onTap:
-                    () => Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => PopularScreen()),
-                    ),
+                onTap: () => context.go('/popular'),
                 child: Text(
                   context.tr('see_all'),
                   style: GoogleFonts.roboto(
@@ -283,7 +235,6 @@ class _HomeScreenState extends State<HomeScreen> {
               ],
             ),
           ),
-
           Expanded(
             child: Column(
               children: [Image.asset('assets/action.png', fit: BoxFit.cover)],

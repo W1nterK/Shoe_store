@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:matule/core/helpers/brand_colors.dart';
-import 'package:matule/layers/presentation/screens/home_screen.dart';
 import 'package:matule/layers/presentation/shared/ui/card_screen.dart';
 
 class OutdoorScreen extends StatefulWidget {
@@ -32,12 +31,8 @@ class _OutdoorScreenState extends State<OutdoorScreen> {
                 ),
                 alignment: Alignment.center,
                 child: IconButton(
-                  onPressed:
-                      () => Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => HomeScreen()),
-                      ),
-                  icon: Icon(CupertinoIcons.back, size: 20,),
+                  onPressed: () => context.go('/home'),
+                  icon: Icon(CupertinoIcons.back, size: 20),
                 ),
               ),
               Text(
@@ -76,7 +71,6 @@ class _OutdoorScreenState extends State<OutdoorScreen> {
                     ),
                   ),
                 ),
-
                 Container(
                   width: 150,
                   margin: EdgeInsets.only(right: 12),
@@ -86,25 +80,15 @@ class _OutdoorScreenState extends State<OutdoorScreen> {
                     borderRadius: BorderRadius.circular(12),
                   ),
                   alignment: Alignment.center,
-                  child: GestureDetector(
-                    onTap:
-                        () => Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => OutdoorScreen(),
-                          ),
-                        ),
-                    child: Text(
-                      'Outdoor',
-                      style: GoogleFonts.roboto(
-                        fontSize: 15,
-                        color: BrandColors.block,
-                        fontWeight: FontWeight.w700,
-                      ),
+                  child: Text(
+                    'Outdoor',
+                    style: GoogleFonts.roboto(
+                      fontSize: 15,
+                      color: BrandColors.block,
+                      fontWeight: FontWeight.w700,
                     ),
                   ),
                 ),
-
                 Container(
                   width: 150,
                   padding: EdgeInsets.symmetric(horizontal: 24),

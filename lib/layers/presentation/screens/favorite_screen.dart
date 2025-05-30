@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:matule/core/helpers/brand_colors.dart';
-import 'package:matule/layers/presentation/screens/home_screen.dart';
 import 'package:matule/layers/presentation/shared/ui/card_screen.dart';
 
 class FavoriteScreen extends StatefulWidget {
@@ -32,14 +31,8 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
                 ),
                 alignment: Alignment.center,
                 child: IconButton(
-                  onPressed:
-                      () => Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => HomeScreen(),
-                        ),
-                      ),
-                  icon: Icon(CupertinoIcons.back, size: 20,),
+                  onPressed: () => context.go('/home'),
+                  icon: Icon(CupertinoIcons.back, size: 20),
                 ),
               ),
               Text(
@@ -58,7 +51,7 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
                 alignment: Alignment.center,
                 child: IconButton(
                   onPressed: () {},
-                  icon: Icon(CupertinoIcons.heart, size: 20,),
+                  icon: Icon(CupertinoIcons.heart, size: 20),
                 ),
               ),
             ],

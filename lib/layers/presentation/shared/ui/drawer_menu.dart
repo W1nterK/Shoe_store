@@ -83,7 +83,7 @@ class DrawerMenu extends StatelessWidget {
               ),
               onPressed: () {
                 ZoomDrawer.of(context)?.close();
-                context.go('/profile');
+                context.go('/cart');
               },
             ),
           ),
@@ -134,7 +134,7 @@ class DrawerMenu extends StatelessWidget {
               ),
               onPressed: () {
                 ZoomDrawer.of(context)?.close();
-                context.go('/cart');
+                context.go('/orders');
               },
             ),
           ),

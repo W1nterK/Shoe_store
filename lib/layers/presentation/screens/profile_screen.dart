@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:matule/core/helpers/brand_colors.dart';
 import 'package:matule/layers/presentation/screens/home_screen.dart';
@@ -31,11 +32,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ),
                 alignment: Alignment.center,
                 child: IconButton(
-                  onPressed:
-                      () => Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => HomeScreen()),
-                      ),
+                  onPressed: () => context.go('/home'),
                   icon: Icon(CupertinoIcons.back, size: 20,),
                 ),
               ),

@@ -32,11 +32,7 @@ class _PopularScreenState extends State<PopularScreen> {
                 ),
                 alignment: Alignment.center,
                 child: IconButton(
-                  onPressed:
-                      () => Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => HomeScreen()),
-                      ),
+                  onPressed: () => context.go('/home'),
                   icon: Icon(CupertinoIcons.back, size: 20,),
                 ),
               ),
