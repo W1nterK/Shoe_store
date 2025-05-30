@@ -1,9 +1,8 @@
 # [Worldskills 2025](https://pro.firpo.ru/)  mobile development app 
 
-<p>Разработка велась с использованием последней стабильной версии Flutter на момент проекта.
-Разработка велась с использованием последней стабильной версии Flutter на момент проекта..</p>
+<p>Разработка велась с использованием последней стабильной версии Flutter на момент проекта..</p>
 
-![Worldskills 2025](https://github.com/m9m9ra/flutter_championship_2025/blob/main/publication/preview.png)
+![Worldskills 2025](https://github.com/W1nterK/championship_task/blob/78b70a24957502156c84a8be96294c0a37706072/publication/preview%20(1).png)
 
 ## Getting Started
 
@@ -23,7 +22,7 @@ chose android
 ### API Integration
 <p>A Rest API is used for user operations, and the API code is not included in this repository. You can develop API endpoints according to the UserModel class in the project to make it suitable for use. You need to update the BASE_URL value in the '.env' file content to match your API structure. You can find the naming used for CRUD and authentication endpoints in the UserService class, and you may need to revise it according to your API structure.</p>
 
-#
+<!--#
 ### Supabase Integration
 <p>The project uses Storage for uploading images and accessing them via URL, Extensions and Firestore Database for email infrastructure and Functions for triggering email sending. Therefore, you will need a supabase project.</p>
 
@@ -63,14 +62,14 @@ chose android
 dart run easy_localization:generate --source-dir assets/translations
 ``` -->
 
-## Documentation
+<!--## Documentation
 
 This project is a starting point for a Flutter application.
 
 A few resources to get you started if this is your first Flutter project:
 
 - [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)-->
 
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
