@@ -4,6 +4,7 @@ import 'package:matule/layers/presentation/screens/build_screen.dart';
 import 'package:matule/layers/presentation/screens/cart_screen.dart';
 import 'package:matule/layers/presentation/screens/create_user_screen.dart';
 import 'package:matule/layers/presentation/screens/favorite_screen.dart';
+import 'package:matule/layers/presentation/screens/first_screen.dart';
 import 'package:matule/layers/presentation/screens/forgot_password_srceen.dart';
 import 'package:matule/layers/presentation/screens/home_screen.dart';
 import 'package:matule/layers/presentation/screens/language_screen.dart';
@@ -12,15 +13,20 @@ import 'package:matule/layers/presentation/screens/outdoor_screen.dart';
 import 'package:matule/layers/presentation/screens/popular_screen.dart';
 import 'package:matule/layers/presentation/screens/profile_screen.dart';
 import 'package:matule/layers/presentation/screens/search_screen.dart';
+import 'package:matule/layers/presentation/screens/second_screen.dart';
 import 'package:matule/layers/presentation/screens/settings_screen.dart';
 import 'package:matule/layers/presentation/screens/signin_screen.dart';
 import 'package:go_router/go_router.dart';
+import 'package:matule/layers/presentation/screens/third_screen.dart';
 import 'package:matule/layers/presentation/shared/ui/drawer_menu.dart';
 
 class RouterConfigGO {
   final GoRouter router = GoRouter(
-    initialLocation: '/signin',
+    initialLocation: '/first',
     routes: [
+      GoRoute(path: '/first', builder: (context, state) => FirstScreen()),
+      GoRoute(path: '/second', builder: (context, state) => SecondScreen()),
+      GoRoute(path: '/third', builder: (context, state) => ThirdScreen()),
       GoRoute(path: '/signin', builder: (context, state) => SigninScreen()),
       GoRoute(
         path: '/pass',

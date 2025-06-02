@@ -59,5 +59,7 @@
     "last_name": "Фамилия",
     "save_now": "Сохранить",
     "language": "Язык",
-     "telephone": "Телефон"
+     "telephone": "Телефон",
+     "start": "Начать",
+     "next": "Далее"
 }

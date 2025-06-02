@@ -69,6 +69,9 @@ flutter:
     - assets/bottombar.png
     - assets/action.png
     - assets/nike_zoom.png
+    - assets/image_1.png
+    - assets/image_2.png
+    - assets/image_3.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

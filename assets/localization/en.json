@@ -59,5 +59,7 @@
     "last_name": "Last Name",
     "save_now": "Save Now",
     "language": "Language",
-    "telephone": "Telephone"
+    "telephone": "Telephone",
+      "start": "Start",
+     "next": "Next"
 }
