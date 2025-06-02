@@ -34,7 +34,8 @@ class RouterConfigGO {
       ),
       GoRoute(path: '/create', builder: (context, state) => CreateUser()),
       GoRoute(path: '/popular', builder: (context, state) => PopularScreen()),
-      
+
+      GoRoute(path: '/cart', builder: (context, state) => CartScreen()),
 
       StatefulShellRoute.indexedStack(
         builder: (context, state, navigationShell) {
@@ -82,14 +83,7 @@ class RouterConfigGO {
               ),
             ],
           ),
-                    StatefulShellBranch(
-            routes: [
-              GoRoute(
-                path: '/cart',
-                builder: (context, state) => CartScreen(),
-              ),
-            ],
-          ),
+
           StatefulShellBranch(
             routes: [
               GoRoute(
@@ -106,7 +100,7 @@ class RouterConfigGO {
               ),
             ],
           ),
-           StatefulShellBranch(
+          StatefulShellBranch(
             routes: [
               GoRoute(
                 path: '/language',

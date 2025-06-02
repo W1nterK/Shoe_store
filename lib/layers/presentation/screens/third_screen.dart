@@ -31,6 +31,7 @@ class ThirdScreen extends StatelessWidget {
               fontSize: 35,
               color: BrandColors.block,
               fontWeight: FontWeight.w500,
+              decoration: TextDecoration.none
             ),
             textAlign: TextAlign.center,
           ),
@@ -45,6 +46,7 @@ class ThirdScreen extends StatelessWidget {
                 fontSize: 20,
                 color: BrandColors.subTextLight,
                 fontWeight: FontWeight.w500,
+                decoration: TextDecoration.none
               ),
               textAlign: TextAlign.center,
             ),
@@ -65,6 +67,7 @@ class ThirdScreen extends StatelessWidget {
                   fontSize: 15,
                   color: BrandColors.text,
                   fontWeight: FontWeight.w700,
+                  decoration: TextDecoration.none
                 ),
                 textAlign: TextAlign.center,
               ),

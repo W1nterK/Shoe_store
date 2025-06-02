@@ -43,6 +43,7 @@ class CartCardScreen extends StatelessWidget {
                     fontSize: 16,
                     color: BrandColors.text,
                     fontWeight: FontWeight.w700,
+                    decoration: TextDecoration.none
                   ),
                 ),
                 SizedBox(height: 8),
@@ -52,6 +53,7 @@ class CartCardScreen extends StatelessWidget {
                     fontSize: 15,
                     color: BrandColors.text,
                     fontWeight: FontWeight.w700,
+                    decoration: TextDecoration.none
                   ),
                 ),
               ],

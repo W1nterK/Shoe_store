@@ -21,6 +21,7 @@ class FirstScreen extends StatelessWidget {
               fontSize: 40,
               color: BrandColors.block,
               fontWeight: FontWeight.w700,
+             decoration: TextDecoration.none
             ),
           ),
           SizedBox(height: 80),
@@ -48,6 +49,7 @@ class FirstScreen extends StatelessWidget {
                   fontSize: 15,
                   color: BrandColors.text,
                   fontWeight: FontWeight.w700,
+                  decoration: TextDecoration.none
                 ),
                 textAlign: TextAlign.center,
               ),

@@ -104,7 +104,7 @@ class _BuildScreenState extends State<BuildScreen> {
                           ),
                           elevation: 12.0,
                           child: Icon(CupertinoIcons.bag, size: 22.0, color: BrandColors.block),
-                          onPressed: () => _navigationOnIndex(4),
+                          onPressed: () => context.go('/cart'),
                         ),
                       ),
                     ),

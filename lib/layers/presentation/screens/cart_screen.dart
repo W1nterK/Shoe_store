@@ -58,6 +58,7 @@ class _CartScreenState extends State<CartScreen> {
                   fontSize: 20,
                   color: BrandColors.text,
                   fontWeight: FontWeight.w600,
+                  decoration: TextDecoration.none,
                 ),
               ),
               SizedBox(width: 40),
@@ -68,7 +69,13 @@ class _CartScreenState extends State<CartScreen> {
             alignment: Alignment.centerLeft,
             child: Text(
               '3 Товара',
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+
+              style: GoogleFonts.roboto(
+                fontSize: 15,
+                color: BrandColors.text,
+                fontWeight: FontWeight.w500,
+                decoration: TextDecoration.none,
+              ),
             ),
           ),
           SizedBox(height: 20),
@@ -98,10 +105,11 @@ class _CartScreenState extends State<CartScreen> {
                       padding: EdgeInsets.symmetric(vertical: 8),
                       child: Text(
                         '$_counter',
-                        style: TextStyle(
+                        style: GoogleFonts.roboto(
                           fontSize: 25,
-                          fontWeight: FontWeight.bold,
                           color: BrandColors.block,
+                          fontWeight: FontWeight.w500,
+                          decoration: TextDecoration.none,
                         ),
                       ),
                     ),
@@ -171,6 +179,27 @@ class _CartScreenState extends State<CartScreen> {
                 ),
               ),
             ],
+          ),
+          SizedBox(height: 25),
+          Container(
+            width: 350,
+            height: 50,
+            margin: EdgeInsets.only(right: 12),
+            padding: EdgeInsets.symmetric(horizontal: 24),
+            decoration: BoxDecoration(
+              color: BrandColors.accent,
+              borderRadius: BorderRadius.circular(12),
+            ),
+            alignment: Alignment.center,
+            child: Text(
+              context.tr('checkout'),
+              style: GoogleFonts.roboto(
+                fontSize: 20,
+                color: BrandColors.block,
+                fontWeight: FontWeight.w700,
+                decoration: TextDecoration.none,
+              ),
+            ),
           ),
         ],
       ),
