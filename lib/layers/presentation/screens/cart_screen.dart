@@ -69,7 +69,6 @@ class _CartScreenState extends State<CartScreen> {
             alignment: Alignment.centerLeft,
             child: Text(
               '3 Товара',
-
               style: GoogleFonts.roboto(
                 fontSize: 15,
                 color: BrandColors.text,
