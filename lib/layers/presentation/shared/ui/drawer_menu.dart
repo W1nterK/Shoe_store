@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
 import 'package:go_router/go_router.dart';
 import 'package:matule/core/helpers/brand_colors.dart';
-import 'package:supabase_flutter/supabase_flutter.dart';
 
 class DrawerMenu extends StatelessWidget {
   const DrawerMenu({super.key});
