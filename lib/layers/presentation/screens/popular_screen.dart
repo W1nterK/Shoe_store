@@ -19,7 +19,7 @@ class _PopularScreenState extends State<PopularScreen> {
   Widget build(BuildContext context) {
     return Container(
       color: BrandColors.background,
-      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 40),
+      padding: EdgeInsets.symmetric(horizontal: 5, vertical: 40),
       child: Column(
         children: [
           Row(
@@ -42,6 +42,7 @@ class _PopularScreenState extends State<PopularScreen> {
                   fontSize: 20,
                   color: BrandColors.text,
                   fontWeight: FontWeight.w600,
+                  decoration: TextDecoration.none
                 ),
               ),
               Container(

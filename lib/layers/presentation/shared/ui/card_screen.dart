@@ -40,6 +40,7 @@ class CardScreen extends StatelessWidget {
               fontSize: 10,
               color: BrandColors.accent,
               fontWeight: FontWeight.w700,
+              decoration: TextDecoration.none
             ),
           ),
         ),
@@ -52,6 +53,7 @@ class CardScreen extends StatelessWidget {
               fontSize: 15,
               color: BrandColors.subTextDark,
               fontWeight: FontWeight.w700,
+              decoration: TextDecoration.none
             ),
           ),
         ),
@@ -64,6 +66,7 @@ class CardScreen extends StatelessWidget {
               fontSize: 15,
               color: BrandColors.text,
               fontWeight: FontWeight.w700,
+              decoration: TextDecoration.none
             ),
           ),
         ),
