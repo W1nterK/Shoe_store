@@ -18,7 +18,7 @@ class _OutdoorScreenState extends State<OutdoorScreen> {
   Widget build(BuildContext context) {
     return Container(
       color: BrandColors.background,
-      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 40),
+      padding: EdgeInsets.symmetric(horizontal: 5, vertical: 40),
       child: Column(
         children: [
           Row(
