@@ -47,7 +47,7 @@ class SecondScreen extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
           ),
-          SizedBox(height: 180),
+          SizedBox(height: 40),
           GestureDetector(
             onTap: () => context.push('/third'),
             child: Container(

@@ -51,7 +51,7 @@ class ThirdScreen extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
           ),
-          SizedBox(height: 160),
+          SizedBox(height: 40),
           GestureDetector(
             onTap: () => context.push('/signin'),
             child: Container(

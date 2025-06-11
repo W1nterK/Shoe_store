@@ -21,7 +21,7 @@ class Notifications extends StatelessWidget {
         ),
         Positioned(
           left: 10,
-          top: 10,
+          top: 5,
           right: 10,
           child: Container(
             height: 100,
@@ -38,7 +38,7 @@ class Notifications extends StatelessWidget {
         ),
         Positioned(
           left: 10,
-          top: 40,
+          top: 30,
           right: 10,
           child: Container(
             height: 100,
@@ -50,7 +50,7 @@ class Notifications extends StatelessWidget {
         ),
         Positioned(
           left: 10,
-          top: 150,
+          top: 130,
           right: 10,
           child: Container(
             height: 100,

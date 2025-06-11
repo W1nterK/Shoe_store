@@ -33,7 +33,7 @@ class FirstScreen extends StatelessWidget {
             ],
           ),
 
-          SizedBox(height: 250),
+          SizedBox(height: 120),
           GestureDetector(
             onTap: () => context.push('/second'),
             child: Container(
