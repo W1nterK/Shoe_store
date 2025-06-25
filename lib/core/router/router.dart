@@ -9,6 +9,7 @@ import 'package:matule/layers/presentation/screens/forgot_password_srceen.dart';
 import 'package:matule/layers/presentation/screens/home_screen.dart';
 import 'package:matule/layers/presentation/screens/language_screen.dart';
 import 'package:matule/layers/presentation/screens/notifications_screen.dart';
+import 'package:matule/layers/presentation/screens/orders_screen.dart';
 import 'package:matule/layers/presentation/screens/outdoor_screen.dart';
 import 'package:matule/layers/presentation/screens/popular_screen.dart';
 import 'package:matule/layers/presentation/screens/profile_screen.dart';
@@ -28,6 +29,7 @@ class RouterConfigGO {
       GoRoute(path: '/second', builder: (context, state) => SecondScreen()),
       GoRoute(path: '/third', builder: (context, state) => ThirdScreen()),
       GoRoute(path: '/signin', builder: (context, state) => SigninScreen()),
+      GoRoute(path: '/orders', builder: (context, state) => Order()),
       GoRoute(
         path: '/pass',
         builder: (context, state) => ForgotPasswordsrceen(),
@@ -108,6 +110,7 @@ class RouterConfigGO {
               ),
             ],
           ),
+          
         ],
       ),
     ],

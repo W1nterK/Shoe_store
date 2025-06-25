@@ -77,7 +77,6 @@ class _LanguageScreenState extends State<LanguageScreen> {
                           style: GoogleFonts.roboto(
                             fontSize: 15,
                             color: BrandColors.text,
-                            // fontWeight: FontWeight.w700,
                           ),
                         ),
                       ],
@@ -106,7 +105,6 @@ class _LanguageScreenState extends State<LanguageScreen> {
                           style: GoogleFonts.roboto(
                             fontSize: 15,
                             color: BrandColors.text,
-                            // fontWeight: FontWeight.w700,
                           ),
                         ),
                       ],

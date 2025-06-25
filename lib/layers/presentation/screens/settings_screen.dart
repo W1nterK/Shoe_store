@@ -74,7 +74,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
                           style: GoogleFonts.roboto(
                             fontSize: 15,
                             color: BrandColors.text,
-                            // fontWeight: FontWeight.w700,
                           ),
                         ),
                       ],
