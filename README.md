@@ -1,4 +1,4 @@
-# [Worldskills 2025](https://pro.firpo.ru/)  mobile development app 
+# Shoe Store
 
 <p>Разработка велась с использованием последней стабильной версии Flutter на момент проекта..</p>
 
