@@ -2,7 +2,7 @@
 
 <p>Разработка велась с использованием последней стабильной версии Flutter на момент проекта..</p>
 
-![Worldskills 2025](https://github.com/W1nterK/Shoe_store/blob/main/publication/preview.png)
+![Shoe Store](https://github.com/W1nterK/Shoe_store/blob/main/publication/preview.png)
 
 ## Getting Started
 
