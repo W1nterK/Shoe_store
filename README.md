@@ -2,7 +2,7 @@
 
 <p>Разработка велась с использованием последней стабильной версии Flutter на момент проекта..</p>
 
-![Worldskills 2025](https://github.com/W1nterK/championship_task/blob/78b70a24957502156c84a8be96294c0a37706072/publication/preview%20(1).png)
+![Worldskills 2025](https://github.com/W1nterK/Shoe_store/blob/main/publication/preview.png)
 
 ## Getting Started
 
